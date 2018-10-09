@@ -14,18 +14,18 @@ It is a Data Regression Project
         SPI Global Rankings - Ranking of all International soccer teams.
         SPI all Matches - Metrics of all the matches
 - We will be using **SPI all matches** dataset to predict the goals for each team
----
+
 # Regression
 - We will be applying two types of regression on data
 -- **Linear Regression**
 -- **Random Forest Regression**
----
+
 # Data Preparation
 - **NaN Values**
 -- Some of the mathces didn't have **Scores**. Those records were removed (No way to compare the prediction)
 -- Some of the other fields had NaN. Mean values of the respective column is used.
 
----
+
 # Analysis
 #### Linear Regression:
 - Data has been split into Train and Test.
@@ -46,7 +46,6 @@ It is a Data Regression Project
 - Below graph shows the comparison of each model.
 ![Mean Square Error](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/MSE.png "MEan Square Error")
 
----
 
 # Project Struture
 
