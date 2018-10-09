@@ -22,8 +22,8 @@ It is a Data Regression Project
 
 # Data Preparation
 - **NaN Values**
--- Some of the mathces didn't have **Scores**. Those records were removed (No way to compare the prediction)
--- Some of the other fields had NaN. Mean values of the respective column is used.
+  - Some of the mathces didn't have **Scores**. Those records were removed (No way to compare the prediction)
+  - Some of the other fields had NaN. Mean values of the respective column is used.
 
 
 # Analysis
@@ -37,13 +37,14 @@ It is a Data Regression Project
 #### Random Forest Regression:
 - 100 Decision trees has been used for the prediction.
 - Computed Decision Tree
--- [Team 1](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/RFTree1.png)
--- [Team 2](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/RFTree2.png)
+  - [Team 1](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/RFTree1.png)
+  - [Team 2](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/RFTree2.png)
 
 #### Results:
 - Random forest performed well in training data set. 
 - Linear regression model gave almost same result in both Traning and Testing.
 - Below graph shows the comparison of each model.
+
 ![Mean Square Error](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/MSE.png "MEan Square Error")
 
 
