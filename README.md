@@ -1,54 +1,66 @@
-# To be, or not to be
+# Major Leagues - Football (Soccer)
 
-It is a Data Classifier Project.
-
+It is a Data Regression Project
 
 # What it Does?
-
-  - It determines the player based on the features.
-  - To get the accuracy rate for prediction
+  - It predicts the score of a team based on the other metrics.
+  
 # Datset Used
-- Shakespeare Plays : https://www.kaggle.com/kingburrito666/shakespeare-plays
--- It contains data from Shakespeare's plays such as Play, player, Player Line and Act
+- Soccer SPI : https://github.com/fivethirtyeight/data/tree/master/soccer-spi
+- ###### It contains 3 Data Files.
 
 
-# Data Classification
-- We are classifying Player Line using 4 different classification models.
-- ##### Models
-        1) Random Forest
-        2) Support Vector Machine
-        3) Naive Byes
-        4) Logistics Regression
-- To classify text, we need to convert into numerical forms. So, the player line has been converted to a **tfidf vector**
-- This vector is then used to train the model.
+        SPI Global Rankings - Ranking of all soccer teams (club)
+        SPI Global Rankings - Ranking of all International soccer teams.
+        SPI all Matches - Metrics of all the matches
+- We will be using **SPI all matches** dataset to predict the goals for each team
+---
+# Regression
+- We will be applying two types of regression on data
+-- **Linear Regression**
+-- **Random Forest Regression**
+---
+# Data Preparation
+- **NaN Values**
+-- Some of the mathces didn't have **Scores**. Those records were removed (No way to compare the prediction)
+-- Some of the other fields had NaN. Mean values of the respective column is used.
+
+---
 # Analysis
-- Data has been split into two sets - Train and Test. Using default methodology.
-- Below graph shows the Play vs No of Players
-![Play vs No of Players](https://raw.githubusercontent.com/nareshkumar66675/Shakespeare/master/reports/PlayVSPlayers.png "Play vs No of Players")
-- ##### Accuracy
-    --Accuracy for each model is evaluated.
-    -- Logistic Regression accuracy rate was higher than the other models.
+#### Linear Regression:
+- Data has been split into Train and Test.
+- Linear Regression has been applied for both the teams to predict the score.
+- Below graphs shows the Residual plot for both the teams.
 
-| Models | Accuracy |
-|------------------------|----------|
-| SVM | 0.043564 |
-| **Logistic Regression** | **0.046845** |
-| Naive Byes | 0.032881 |
-| Random Forest Classifier | 0.021660 |
+![Residual Plot 1](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/ResidualTeam1.png "Residual Plot 1")  |  ![Residual Plot 2](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/ResidualTeam2.png " Residual Plot 2")
 
-- Accuracy Comparison of all the models
-- ![Accuracy Comparison](https://raw.githubusercontent.com/nareshkumar66675/Shakespeare/master/reports/ModelComparison.png "Accuracy Comparison")
+#### Random Forest Regression:
+- 100 Decision trees has been used for the prediction.
+- Computed Decision Tree
+-- [Team 1](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/RFTree1.png)
+-- [Team 2](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/RFTree2.png)
+
+#### Results:
+- Random forest performed well in training data set. 
+- Linear regression model gave almost same result in both Traning and Testing.
+- Below graph shows the comparison of each model.
+![Mean Square Error](https://raw.githubusercontent.com/nareshkumar66675/SoccerSPI/master/reports/MSE.png "MEan Square Error")
+
+---
 
 # Project Struture
 
 ##### Src
-- Shakespeare.py - python file exported from Jupyter
+- SoccerSPI.py - python file exported from Jupyter
 ##### Notebooks
-- Shakespeare.ipynb - Jupyter notebook
+- SoccerSPI.ipynb - Jupyter notebook
 ##### Data
-- External - Shakespeare Data
+- External - SoccerSPI Data
 ##### Reports
-- Plot - Plays vs Player Count and Accuracy Comparison
+- Trees - Decision Trees
+- Graphs - Residual & Mean Square Error
+
+***
 
 
   
